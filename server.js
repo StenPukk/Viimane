@@ -1,14 +1,12 @@
 const express = require('express');
-const bodyParser = require('body-parser');
-const todoRouter = require();
-const dotenv = require('dotenv');
+const todoRouter = require('./routes/todo.routes');
 const app = express();
 
-app.use(bodyParser.json());
+app.use(express.json());
 
 
-app.use('/', );
+app.use('/todo',todoRouter );
 
-app.listen(, () => {
-    console.log('Server is running on Port 3000.');
+app.listen(5000, () => {
+    console.log('Server is running on Port 5000.');
 });
